@@ -1,0 +1,51 @@
+Commonly used data structures in cpp
+
+1. std::vector --> random access by index and efficiently sequential access where random access can be expensive.
+
+2. std::list --> ideal for frequent insertions and delections but with accessing elements can be slower compared to the vector.
+
+3. std::deque --> ideal for adding elements on the back and removing them from the front really helps,and can be the alternative to the std::vector.
+
+4. std::map and std::set -> Based on balanced binary search trees (typically red-black-trees)
+these provide efficient-key-based lookup, insertion and deletion in logarithmic time. and maintain
+elements in the sorted order.
+
+5. std::unordered_map and std::unordered_set -> based on the hash tables, these offer
+average constant time complexity for key-based values and are generally faster than
+std::map and std::set for the large datasets where the order doesn't matter.
+
+
+like using g++ -O2 -o my_program program.cpp
+
+--- Overview of the datastructures in c++
+1. Sequential Containers ((
+    a. std::array (Fixed size array) (Storing a fixed number with fast random access.)
+        .. Contigous memory but size cannot be changed at runtime.
+
+    b. std::vector (Dynamic Array) like a flexible array which expands in its way. everything elements
+    else except insertions and deletions are O(n)
+
+    c. std::deque (Double ended queue)
+    faster at enqueing and dequeing elements in O(1)...>> gives random access but slower than the vector.
+
+    d. std::list (Doubly Linked List.) (Frequent Insertions and deletions int the middle)
+because we are able to traverse back to the elements. but random access requires traversing.
+    e. std::forward_list (Singly linked list) (
+    Best for the memory efficient Singly linked lists where only forward traversals is needed.
+
+)
+
+2. Associative Containers (Key-Value Pairs)
+    std::map --> balanced binary search tree.
+    (best for Sorted key value storag) with O(log n) access.
+
+    std::unordered_map (hash table) with O(1) lookups where order doesn't matter.
+    std::set and std::unordered_set -- stores the unique elements.
+
+3. Adaptive Containers
+    std::stack:: operates on the principle of LIFO to mean Last In and First Out
+
+    std::queue:: operates on the principle of FIFO to mean First In First Out or LILO (Last In , Last Out.)
+
+    std::priority_queue (heap) for getting the minimum or the maximu element.
+))
